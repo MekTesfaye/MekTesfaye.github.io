@@ -178,7 +178,7 @@ body.modal-open{overflow:hidden}
 <button type="button" class="card project" data-project="nzas-2026" aria-haspopup="dialog"><img class="cover" src="assets/summit-2026/01-hero-thumb.jpg" srcset="assets/summit-2026/01-hero-thumb.jpg 480w, assets/summit-2026/01-hero.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="Summit stage screen with event branding and the sponsor wall" loading="lazy"><h3>NZ Aerospace Summit 2026</h3><p>Campaign strategy and content for New Zealand's largest aerospace networking event (750+ attendees). The 2026 Summit set a ticket-revenue record.</p><span class="tag">Aerospace New Zealand · Campaign · Content</span><span class="more">View project &rarr;</span></button>
 <button type="button" class="card project" data-project="nzas-2023-2025" aria-haspopup="dialog"><img class="cover" src="assets/summit-2025/00-fireside-thumb.jpg" srcset="assets/summit-2025/00-fireside-thumb.jpg 480w, assets/summit-2025/00-fireside.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="Kayla Renner of Voyager Technologies on stage at the New Zealand Aerospace Summit 2025, beside a screen reading &#x27;Invited speaker - fireside chat with Mark Rocket&#x27;, with the sponsor wall behind" loading="lazy"><h3>NZ Aerospace Summit 2023–2025</h3><p>Three years leading the Summit's branding, design and national campaigns, with my own marketing budget. Attendance grew 20% year on year and has grown every year since 2023.</p><span class="tag">Aerospace New Zealand · Brand · Campaign</span><span class="more">View project &rarr;</span></button>
 <button type="button" class="card project" data-project="mark-rocket" aria-haspopup="dialog"><h3>First New Zealander in space</h3><p>Mark Rocket's 2025 Blue Origin flight came after Katy Perry's, so it risked a "rich tourist" pile-on. I kept the story genuine for New Zealanders. It ran in at least 12 stories across 10 outlets, including 1News, NZ Herald and Space.com, and none took the rich-tourist angle.</p><span class="tag">Client: Mark Rocket · PR · Video</span><span class="more">View project &rarr;</span></button>
-<button type="button" class="card project" data-project="protest-response" aria-haspopup="dialog"><h3>When protesters showed up</h3><p>Protesters targeted Summit sponsors and speakers over aerospace militarisation. Instead of going quiet, we issued releases and invited media to talk to attendees directly. The result was balanced coverage on 1News, RNZ, The Press and Stuff.</p><span class="tag">Aerospace New Zealand · Crisis comms</span><span class="more">View project &rarr;</span></button>
+<button type="button" class="card project" data-project="protest-response" aria-haspopup="dialog"><img class="cover" src="assets/protest/rnz-video.jpg" alt="Thumbnail of the RNZ video Protest at aerospace summit in Christchurch" loading="lazy"><h3>When protesters showed up</h3><p>Protesters targeted Summit sponsors and speakers over aerospace militarisation. Instead of going quiet, we issued releases and invited media to talk to attendees directly. The result was balanced coverage on 1News, RNZ, The Press and Stuff.</p><span class="tag">Aerospace New Zealand · Crisis comms</span><span class="more">View project &rarr;</span></button>
 <button type="button" class="card project" data-project="audience-growth" aria-haspopup="dialog"><h3>Building an audience for NZ aerospace</h3><p>I grew LinkedIn from 2,500 to 9,000+ followers in under two years and the email database by 58%, with open rates averaging ~55%. I ran five channels and later built an AI-assisted weekly workflow for news monitoring and LinkedIn content.</p><span class="tag">Aerospace New Zealand · Social · Email</span><span class="more">View project &rarr;</span></button>
 <button type="button" class="card project" data-project="ecosystem-map" aria-haspopup="dialog"><h3>Mapping New Zealand's aerospace industry</h3><p>I audited hundreds of NZ aerospace organisations against NASA's Technology Taxonomy and led updates to the ChristchurchNZ Aerospace Ecosystem Map, which informs regional strategy.</p><span class="tag">ChristchurchNZ · Research</span><span class="more">View project &rarr;</span></button>
 </div>
@@ -393,10 +393,45 @@ body.modal-open{overflow:hidden}
   "brief": "Protesters targeted Summit sponsors and speakers over aerospace militarisation. Instead of going quiet, we chose to respond.",
   "did": [
    "Issued press releases",
-   "Invited media to talk to attendees directly"
+   "Invited media to talk to attendees directly",
+   "Drafted the Aerospace New Zealand response and Mark Rocket's talking points for media"
   ],
   "outcome": "Balanced coverage on 1News, RNZ, The Press and Stuff.",
-  "images": []
+  "images": [
+   {
+    "src": "assets/protest/rnz-video.jpg",
+    "thumb": "assets/protest/rnz-video.jpg",
+    "alt": "Thumbnail of the RNZ video Protest at aerospace summit in Christchurch",
+    "caption": "RNZ video: Protest at aerospace summit in Christchurch. Watch it via the link under Coverage."
+   }
+  ],
+  "linksLabel": "Coverage",
+  "links": [
+   {
+    "label": "RNZ video: Protest at aerospace summit in Christchurch (YouTube)",
+    "url": "https://www.youtube.com/watch?v=egIdE0111VY"
+   },
+   {
+    "label": "Aerospace New Zealand: Summit statement on protest activity (I wrote it)",
+    "url": "https://www.aerospace.org.nz/news/new-zealand-aerospace-summit-gets-underway-2025"
+   },
+   {
+    "label": "RNZ: Arrests as protesters target Christchurch aerospace summit (Mark Rocket quoted)",
+    "url": "https://www.rnz.co.nz/news/national/575302/arrests-as-protesters-target-christchurch-aerospace-summit"
+   },
+   {
+    "label": "The Press: Collins accuses peace activists of 'living in another world' (Mark Rocket quoted)",
+    "url": "https://www.thepress.co.nz/nz-news/360847190/peace-activists-blockade-convention-centre-protest-against-aerospace-conference"
+   },
+   {
+    "label": "The Spinoff: Dozens of protesters arrested at Aerospace Summit (Aerospace New Zealand statement quoted)",
+    "url": "https://thespinoff.co.nz/society/08-10-2025/dozens-of-protesters-arrested-at-aerospace-summit-in-christchurch"
+   },
+   {
+    "label": "The Space Review: New Zealand looks for its place in the global space industry (Mark Rocket quoted)",
+    "url": "https://www.thespacereview.com/article/5083/1"
+   }
+  ]
  },
  "audience-growth": {
   "title": "Building an audience for NZ aerospace",
@@ -432,7 +467,7 @@ const focusables=el=>[...el.querySelectorAll('button,[href],[tabindex]:not([tabi
 function trap(e,el){if(e.key!=='Tab')return;const f=focusables(el);if(!f.length)return;const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}
 function open(id,card){const p=data[id];if(!p)return;cur=p;opener=card;
 panel.classList.toggle('noimg',!p.images.length);gal.innerHTML=p.images.map((im,i)=>`<figure class="pm-fig"><button type="button" data-i="${i}" aria-label="Enlarge image ${i+1} of ${p.images.length}"><img src="${esc(im.thumb||im.src)}" alt="${esc(im.alt)}" loading="lazy"></button>${im.caption?`<figcaption>${esc(im.caption)}</figcaption>`:''}</figure>`).join('');
-txt.innerHTML=`<p class="eyebrow">${esc(p.org)}</p><h2 id="pm-title">${esc(p.title)}</h2><dl><dt>The brief</dt><dd>${esc(p.brief)}</dd><dt>What I did</dt><dd><ul>${p.did.map(d=>`<li>${esc(d)}</li>`).join('')}</ul></dd><dt>What happened</dt><dd>${esc(p.outcome)}</dd>${p.links?`<dt>Posts I wrote</dt><dd><ul>${p.links.map(l=>`<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></li>`).join('')}</ul></dd>`:''}</dl>${p.note?`<p class="pm-note">${esc(p.note)}</p>`:''}`;
+txt.innerHTML=`<p class="eyebrow">${esc(p.org)}</p><h2 id="pm-title">${esc(p.title)}</h2><dl><dt>The brief</dt><dd>${esc(p.brief)}</dd><dt>What I did</dt><dd><ul>${p.did.map(d=>`<li>${esc(d)}</li>`).join('')}</ul></dd><dt>What happened</dt><dd>${esc(p.outcome)}</dd>${p.links?`<dt>${esc(p.linksLabel||'Posts I wrote')}</dt><dd><ul>${p.links.map(l=>`<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></li>`).join('')}</ul></dd>`:''}</dl>${p.note?`<p class="pm-note">${esc(p.note)}</p>`:''}`;
 pm.hidden=false;document.body.classList.add('modal-open');{const r=card.getBoundingClientRect(),q=panel.getBoundingClientRect();panel.style.setProperty('--ox',(r.left+r.width/2-q.left)+'px');panel.style.setProperty('--oy',(r.top+r.height/2-q.top)+'px')}panel.scrollTop=0;requestAnimationFrame(()=>requestAnimationFrame(()=>pm.classList.add('open')));pm.querySelector('.pm-close').focus()}
 function close(){pm.classList.remove('open');const done=()=>{pm.hidden=true;document.body.classList.remove('modal-open');opener&&opener.focus()};rm.matches?done():setTimeout(done,350)}
 function show(i){idx=(i+cur.images.length)%cur.images.length;const im=cur.images[idx];lbImg.src=im.src;lbImg.alt=im.alt;lbCap.textContent=im.caption||'';lbCount.textContent=`${idx+1} / ${cur.images.length}`}
