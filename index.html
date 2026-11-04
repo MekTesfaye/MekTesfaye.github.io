@@ -254,7 +254,50 @@ body.modal-open{overflow:hidden}
    "Used HubSpot daily for campaigns, registration pages, events, linking event registrations to campaigns, and analytics. Used Asana almost daily for webinar projects, strategic projects and contract project onboarding"
   ],
   "outcome": "Marketing's workload dropped significantly and SME webinars got better. Clearer webinar comms improved engagement and conversion. Registrations and on-demand views rose sharply, with 206–310 registrations per webinar and webinar email open rates around 55%.",
-  "images": []
+  "images": [
+   {
+    "src": "assets/esri/iceye.jpg",
+    "thumb": "assets/esri/iceye-thumb.jpg",
+    "alt": "Esri Australia and ICEYE partnership announcement graphic",
+    "caption": "Graphic for a LinkedIn post I wrote: Esri Australia and ICEYE partnership."
+   },
+   {
+    "src": "assets/esri/earth.jpg",
+    "thumb": "assets/esri/earth-thumb.jpg",
+    "alt": "Happy Earth Day 'Pixels for planet' pixel-art graphic for Esri Australia",
+    "caption": "Graphic for a LinkedIn post I wrote: Earth Day 2026, Pixels for planet."
+   },
+   {
+    "src": "assets/esri/dataminr.jpg",
+    "thumb": "assets/esri/dataminr-thumb.jpg",
+    "alt": "Esri Australia and Dataminr partnership graphic",
+    "caption": "Graphic for a LinkedIn post I wrote: Esri Australia and Dataminr partnership."
+   },
+   {
+    "src": "assets/esri/webinar.jpg",
+    "thumb": "assets/esri/webinar-thumb.jpg",
+    "alt": "Esri Australia live webinar promo for 13 October 2026 on enterprise imagery",
+    "caption": "Graphic for a LinkedIn post I wrote: Esri Australia live webinar, 13 October 2026."
+   }
+  ],
+  "links": [
+   {
+    "label": "ICEYE partnership: hazard intelligence for Australia and Southeast Asia",
+    "url": "https://www.linkedin.com/posts/esri-australia_esriaustralia-arcgis-emergencymanagement-activity-7399976214305898496-7Yjy"
+   },
+   {
+    "label": "Earth Day 2026: Pixels for the Planet",
+    "url": "https://www.linkedin.com/posts/esri-australia_happy-earth-day-2026-this-year-were-activity-7452506552638554112-JEX_"
+   },
+   {
+    "label": "Dataminr partnership: real-time risk intelligence",
+    "url": "https://www.linkedin.com/posts/esri-australia_emergencymanagement-arcgis-situationalawareness-activity-7472823089131773952-daOm"
+   },
+   {
+    "label": "Webinar: Unlocking enterprise imagery (13 October 2026)",
+    "url": "https://www.linkedin.com/posts/esri-australia_esriaustralia-arcgisenterprise-gis-activity-7510143781212561408-kc_R"
+   }
+  ]
  },
  "nzas-2026": {
   "title": "NZ Aerospace Summit 2026",
@@ -383,7 +426,7 @@ const focusables=el=>[...el.querySelectorAll('button,[href],[tabindex]:not([tabi
 function trap(e,el){if(e.key!=='Tab')return;const f=focusables(el);if(!f.length)return;const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}
 function open(id,card){const p=data[id];if(!p)return;cur=p;opener=card;
 panel.classList.toggle('noimg',!p.images.length);gal.innerHTML=p.images.map((im,i)=>`<figure class="pm-fig"><button type="button" data-i="${i}" aria-label="Enlarge image ${i+1} of ${p.images.length}"><img src="${esc(im.thumb||im.src)}" alt="${esc(im.alt)}" loading="lazy"></button>${im.caption?`<figcaption>${esc(im.caption)}</figcaption>`:''}</figure>`).join('');
-txt.innerHTML=`<p class="eyebrow">${esc(p.org)}</p><h2 id="pm-title">${esc(p.title)}</h2><dl><dt>The brief</dt><dd>${esc(p.brief)}</dd><dt>What I did</dt><dd><ul>${p.did.map(d=>`<li>${esc(d)}</li>`).join('')}</ul></dd><dt>What happened</dt><dd>${esc(p.outcome)}</dd></dl>${p.note?`<p class="pm-note">${esc(p.note)}</p>`:''}`;
+txt.innerHTML=`<p class="eyebrow">${esc(p.org)}</p><h2 id="pm-title">${esc(p.title)}</h2><dl><dt>The brief</dt><dd>${esc(p.brief)}</dd><dt>What I did</dt><dd><ul>${p.did.map(d=>`<li>${esc(d)}</li>`).join('')}</ul></dd><dt>What happened</dt><dd>${esc(p.outcome)}</dd>${p.links?`<dt>Posts I wrote</dt><dd><ul>${p.links.map(l=>`<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></li>`).join('')}</ul></dd>`:''}</dl>${p.note?`<p class="pm-note">${esc(p.note)}</p>`:''}`;
 pm.hidden=false;document.body.classList.add('modal-open');{const r=card.getBoundingClientRect(),q=panel.getBoundingClientRect();panel.style.setProperty('--ox',(r.left+r.width/2-q.left)+'px');panel.style.setProperty('--oy',(r.top+r.height/2-q.top)+'px')}panel.scrollTop=0;requestAnimationFrame(()=>requestAnimationFrame(()=>pm.classList.add('open')));pm.querySelector('.pm-close').focus()}
 function close(){pm.classList.remove('open');const done=()=>{pm.hidden=true;document.body.classList.remove('modal-open');opener&&opener.focus()};rm.matches?done():setTimeout(done,350)}
 function show(i){idx=(i+cur.images.length)%cur.images.length;const im=cur.images[idx];lbImg.src=im.src;lbImg.alt=im.alt;lbCap.textContent=im.caption||'';lbCount.textContent=`${idx+1} / ${cur.images.length}`}
