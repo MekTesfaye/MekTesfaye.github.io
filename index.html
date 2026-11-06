@@ -109,7 +109,7 @@ body.modal-open{overflow:hidden}
 .pm-text dt{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:1rem}
 .pm-text dd{margin:.25rem 0 0}
 .pm-text ul{padding-left:1.1rem;margin:.3rem 0}
-.pm-sub{font-size:.85rem;font-weight:600;margin:.7rem 0 .2rem;color:var(--ink)}.pm-sub:first-child{margin-top:.15rem}.pm-tools{margin:.7rem 0 0;font-size:.95rem}
+.pm-sub{font-size:.95rem;font-weight:600;margin:1.1rem 0 .35rem;color:var(--ink)}.pm-sub:first-child{margin-top:.15rem}.pm-sec-label{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:.55rem 0 .15rem}.pm-sec-out{margin:.2rem 0 .1rem}.pm-tools{margin:.9rem 0 0;font-size:.95rem}
 .lb{position:fixed;inset:0;z-index:110;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s}
 .lb[hidden]{display:none}.lb.open{opacity:1}
 .lb img{max-width:92vw;max-height:86vh;border-radius:6px}
@@ -175,7 +175,7 @@ body.modal-open{overflow:hidden}
 <h2>Selected work</h2>
 <p class="lead">Five years across a national industry body, a global software company and an economic development agency. A few highlights below.</p>
 <div class="grid">
-<button type="button" class="card project" data-project="esri-webinars" aria-haspopup="dialog"><img class="cover" src="assets/esri/stage-thumb.jpg" srcset="assets/esri/stage-thumb.jpg 480w, assets/esri/stage.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="Presenter on stage at an Esri Australia in-person event, with a land cover classification slide and a full room" loading="lazy"><h3>Esri Australia events: webinars and in-person</h3><p>Marketing hosted every webinar, which was slow and resource-heavy. Leadership wanted a model the whole organisation could use. I designed a business-led webinar process, rolled it out across five countries, and registrations rose to 206–310 per webinar.</p><span class="tag">Esri Australia · B2B events · Email · Content</span><span class="more">View project &rarr;</span></button>
+<button type="button" class="card project" data-project="esri-webinars" aria-haspopup="dialog"><img class="cover" src="assets/esri/stage-thumb.jpg" srcset="assets/esri/stage-thumb.jpg 480w, assets/esri/stage.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="Presenter on stage at an Esri Australia in-person event, with a land cover classification slide and a full room" loading="lazy"><h3>Esri Australia events: webinars and in-person</h3><p>Content specialist at Esri Australia, focused on events: virtual, in-person and the content around them.</p><span class="tag">Esri Australia · B2B events · Email · Content</span><span class="more">View project &rarr;</span></button>
 <button type="button" class="card project" data-project="nzas-2026" aria-haspopup="dialog"><img class="cover" src="assets/summit-2026/01-hero-thumb.jpg" srcset="assets/summit-2026/01-hero-thumb.jpg 480w, assets/summit-2026/01-hero.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="Summit stage screen with event branding and the sponsor wall" loading="lazy"><h3>NZ Aerospace Summit 2026</h3><p>Campaign strategy and content for New Zealand's largest aerospace networking event (750+ attendees). The 2026 Summit set a ticket-revenue record.</p><span class="tag">Aerospace New Zealand · Campaign · Content</span><span class="more">View project &rarr;</span></button>
 <button type="button" class="card project" data-project="nzas-2023-2025" aria-haspopup="dialog"><img class="cover" src="assets/summit-2025/00-fireside-thumb.jpg" srcset="assets/summit-2025/00-fireside-thumb.jpg 480w, assets/summit-2025/00-fireside.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="Kayla Renner of Voyager Technologies on stage at the New Zealand Aerospace Summit 2025, beside a screen reading &#x27;Invited speaker - fireside chat with Mark Rocket&#x27;, with the sponsor wall behind" loading="lazy"><h3>NZ Aerospace Summit 2023–2025</h3><p>Three years leading the Summit's branding, design and national campaigns, with my own marketing budget. Attendance grew 20% year on year and has grown every year since 2023.</p><span class="tag">Aerospace New Zealand · Brand · Campaign</span><span class="more">View project &rarr;</span></button>
 <button type="button" class="card project" data-project="mark-rocket" aria-haspopup="dialog"><img class="cover" src="assets/markrocket-plaque-thumb.jpg" srcset="assets/markrocket-plaque-thumb.jpg 480w, assets/markrocket-plaque.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="The New Zealand fern plaque floating in zero gravity, with Earth through the capsule window." loading="lazy"><h3>First New Zealander in space</h3><p>Mark Rocket's 2025 Blue Origin flight came after Katy Perry's, so it risked a "rich tourist" pile-on. I kept the story genuine for New Zealanders. It ran in at least 12 stories across 10 outlets, including 1News, NZ Herald and Space.com, and none took the rich-tourist angle.</p><span class="tag">Client: Mark Rocket · PR · Video</span><span class="more">View project &rarr;</span></button>
@@ -240,9 +240,9 @@ body.modal-open{overflow:hidden}
  "esri-webinars": {
   "title": "Esri Australia events: webinars and in-person",
   "org": "Esri Australia",
-  "brief": "Marketing hosted every Esri Australia webinar. That was slow and used a lot of resources. Senior leadership wanted a new model so the whole organisation could run webinars quickly and at scale. It became a marketing-led vs business-led webinar initiative. Early webinar titles and copy also missed the mark. People clicked in and found the content didn't match.",
+  "brief": "Content specialist at Esri Australia, focused on events: virtual, in-person and the content around them.",
   "did": [],
-  "outcome": "Marketing handed off the bulk of webinar delivery. Average attendance rose from 20–30 to ~110 (peak 200), with 206–310 registrations per session and ~55% open rates. The pilot hit its attendance targets. Esri hired a full-time events lead to scale events nationally.",
+  "outcome": "",
   "images": [
    {
     "src": "assets/esri/stage.jpg",
@@ -293,30 +293,37 @@ body.modal-open{overflow:hidden}
     "url": "https://www.linkedin.com/posts/esri-australia_esriaustralia-arcgisenterprise-gis-activity-7510143781212561408-kc_R"
    }
   ],
-  "didSections": [
+  "tools": "HubSpot, Asana",
+  "sections": [
    {
     "heading": "Virtual events",
-    "items": [
+    "brief": "Webinars ran through marketing, and attendance sat at 20–30 per session.",
+    "did": [
      "Built a model that let business teams run their own webinars, piloted it, then rolled it out across five countries.",
      "Rewrote titles and invites so every session delivered what it promised."
-    ]
+    ],
+    "outcome": "Marketing handed off the bulk of webinar delivery. Average attendance rose to ~110 (peak 200), with 206–310 registrations per session and ~55% open rates."
    },
    {
     "heading": "In-person events",
-    "items": [
-     "Revived in-person events after years without them: a three-city pilot in Perth, Canberra and Adelaide.",
+    "brief": "Esri hadn't run in-person events for years.",
+    "did": [
+     "Revived them with a three-city pilot in Perth, Canberra and Adelaide.",
      "Ran all logistics and wrote every invitation and follow-up."
-    ]
+    ],
+    "outcome": "The pilot hit its attendance targets. Esri hired a full-time events lead to scale events nationally."
    },
    {
     "heading": "Content",
-    "items": [
+    "brief": "Every market needed web, blog, social and partner content.",
+    "did": [
      "Web pages, SEO blogs, social and partner posts for all markets.",
-     "Employer brand stories on life beyond the tech."
-    ]
+     "Employer brand stories on life beyond the tech.",
+     "Supported internal comms, including internal initiatives and the quarterly virtual town hall for staff, which regularly drew 500+ attendees across APAC."
+    ],
+    "outcome": "A steady pipeline of on-brand content with a consistent tone of voice that supported the organisation's strategic objectives."
    }
-  ],
-  "tools": "HubSpot, Asana"
+  ]
  },
  "nzas-2026": {
   "title": "NZ Aerospace Summit 2026",
@@ -524,8 +531,8 @@ const focusables=el=>[...el.querySelectorAll('button,[href],[tabindex]:not([tabi
 function trap(e,el){if(e.key!=='Tab')return;const f=focusables(el);if(!f.length)return;const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}
 function open(id,card){const p=data[id];if(!p)return;cur=p;opener=card;
 panel.classList.toggle('noimg',!p.images.length&&!p.video);gal.innerHTML=(p.video?`<figure class="pm-fig pm-video"><div style="position:relative;aspect-ratio:16/9;width:100%"><iframe src="https://www.youtube-nocookie.com/embed/${esc(p.video.id)}" title="${esc(p.video.title)}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>${esc(p.video.caption)}</figcaption></figure>`:'')+p.images.map((im,i)=>`<figure class="pm-fig"><button type="button" data-i="${i}" aria-label="Enlarge image ${i+1} of ${p.images.length}"><img src="${esc(im.thumb||im.src)}" alt="${esc(im.alt)}" loading="lazy"></button>${im.caption?`<figcaption>${esc(im.caption)}</figcaption>`:''}</figure>`).join('');
-const didHtml=p.didSections?p.didSections.map(sec=>`<p class="pm-sub">${esc(sec.heading)}</p><ul>${sec.items.map(d=>`<li>${esc(d)}</li>`).join('')}</ul>`).join('')+(p.tools?`<p class="pm-tools">Tools: ${esc(p.tools)}</p>`:''):`<ul>${p.did.map(d=>`<li>${esc(d)}</li>`).join('')}</ul>`;
-txt.innerHTML=`<p class="eyebrow">${esc(p.org)}</p><h2 id="pm-title">${esc(p.title)}</h2><dl><dt>The brief</dt><dd>${esc(p.brief)}</dd><dt>What I did</dt><dd>${didHtml}</dd><dt>What happened</dt><dd>${esc(p.outcome)}</dd>${p.links?`<dt>${esc(p.linksLabel||'Posts I wrote')}</dt><dd><ul>${p.links.map(l=>`<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></li>`).join('')}</ul></dd>`:''}</dl>${p.note?`<p class="pm-note">${esc(p.note)}</p>`:''}`;
+const bodyHtml=p.sections?`<dt>The brief</dt><dd>${esc(p.brief)}</dd><dd class="pm-sections">${p.sections.map(sec=>`<p class="pm-sub">${esc(sec.heading)}</p><p class="pm-sec-label">Brief</p><p>${esc(sec.brief)}</p><p class="pm-sec-label">What I did</p><ul>${sec.did.map(d=>`<li>${esc(d)}</li>`).join('')}</ul><p class="pm-sec-label">Outcome</p><p class="pm-sec-out">${esc(sec.outcome)}</p>`).join('')}${p.tools?`<p class="pm-tools">Tools: ${esc(p.tools)}</p>`:''}</dd>`:`<dt>The brief</dt><dd>${esc(p.brief)}</dd><dt>What I did</dt><dd><ul>${p.did.map(d=>`<li>${esc(d)}</li>`).join('')}</ul></dd><dt>What happened</dt><dd>${esc(p.outcome)}</dd>`;
+txt.innerHTML=`<p class="eyebrow">${esc(p.org)}</p><h2 id="pm-title">${esc(p.title)}</h2><dl>${bodyHtml}${p.links?`<dt>${esc(p.linksLabel||'Posts I wrote')}</dt><dd><ul>${p.links.map(l=>`<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></li>`).join('')}</ul></dd>`:''}</dl>${p.note?`<p class="pm-note">${esc(p.note)}</p>`:''}`;
 pm.hidden=false;document.body.classList.add('modal-open');{const r=card.getBoundingClientRect(),q=panel.getBoundingClientRect();panel.style.setProperty('--ox',(r.left+r.width/2-q.left)+'px');panel.style.setProperty('--oy',(r.top+r.height/2-q.top)+'px')}panel.scrollTop=0;requestAnimationFrame(()=>requestAnimationFrame(()=>pm.classList.add('open')));pm.querySelector('.pm-close').focus()}
 function close(){pm.classList.remove('open');const done=()=>{pm.hidden=true;document.body.classList.remove('modal-open');opener&&opener.focus()};rm.matches?done():setTimeout(done,350)}
 function show(i){idx=(i+cur.images.length)%cur.images.length;const im=cur.images[idx];lbImg.src=im.src;lbImg.alt=im.alt;lbCap.textContent=im.caption||'';lbCount.textContent=`${idx+1} / ${cur.images.length}`}
