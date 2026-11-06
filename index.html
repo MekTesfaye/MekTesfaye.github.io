@@ -109,6 +109,7 @@ body.modal-open{overflow:hidden}
 .pm-text dt{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:1rem}
 .pm-text dd{margin:.25rem 0 0}
 .pm-text ul{padding-left:1.1rem;margin:.3rem 0}
+.pm-sub{font-size:.85rem;font-weight:600;margin:.7rem 0 .2rem;color:var(--ink)}.pm-sub:first-child{margin-top:.15rem}.pm-tools{margin:.7rem 0 0;font-size:.95rem}
 .lb{position:fixed;inset:0;z-index:110;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s}
 .lb[hidden]{display:none}.lb.open{opacity:1}
 .lb img{max-width:92vw;max-height:86vh;border-radius:6px}
@@ -240,20 +241,8 @@ body.modal-open{overflow:hidden}
   "title": "Esri Australia events: webinars and in-person",
   "org": "Esri Australia",
   "brief": "Marketing hosted every Esri Australia webinar. That was slow and used a lot of resources. Senior leadership wanted a new model so the whole organisation could run webinars quickly and at scale. It became a marketing-led vs business-led webinar initiative. Early webinar titles and copy also missed the mark. People clicked in and found the content didn't match.",
-  "did": [
-   "Designed the process: delivery method, staff resources and the background work needed before launch",
-   "Prepared teams in Australia, Malaysia, Indonesia, Singapore and Bangladesh to run it",
-   "Worked with stakeholders on use cases, pain points and resources",
-   "Tested it with 2–3 business-led SME webinars, alongside marketing-led webinars from the campaign team",
-   "Ran end-to-end logistics for three 100-plus-attendee events across Perth, Canberra and Adelaide: venues, vendors, AV, catering, travel, accommodation and timing. My manager handled the speaker program.",
-   "Made webinar titles and comms more intentional, so they matched what each session delivered",
-   "Wrote all in-person event invitations and follow-up emails. Webinar follow-ups ran automatically through the platform",
-   "Wrote web pages, blogs and social posts for all markets. For blogs, our SEO specialist set the target keywords up front and reviewed my drafts",
-   "Wrote partner and social content linking to articles and news my manager wrote for the website",
-   "Wrote employer brand day-in-the-life pieces on our culture beyond the tech, like Movember and Bridge to Brisbane. I worked through interview questions and drafts, approved by a senior",
-   "Used HubSpot daily for campaigns, registration pages, events, linking event registrations to campaigns, and analytics. Used Asana almost daily for webinar projects, strategic projects and contract project onboarding"
-  ],
-  "outcome": "Marketing's workload dropped significantly and SME webinars got better. Clearer webinar comms improved engagement and conversion. Registrations and on-demand views rose sharply, with 206–310 registrations per webinar and webinar email open rates around 55%.",
+  "did": [],
+  "outcome": "Marketing handed off the bulk of webinar delivery. Average attendance rose from 20–30 to ~110 (peak 200), with 206–310 registrations per session and ~55% open rates. The pilot hit its attendance targets. Esri hired a full-time events lead to scale events nationally.",
   "images": [
    {
     "src": "assets/esri/stage.jpg",
@@ -303,7 +292,31 @@ body.modal-open{overflow:hidden}
     "label": "Webinar: Unlocking enterprise imagery (13 October 2026)",
     "url": "https://www.linkedin.com/posts/esri-australia_esriaustralia-arcgisenterprise-gis-activity-7510143781212561408-kc_R"
    }
-  ]
+  ],
+  "didSections": [
+   {
+    "heading": "Virtual events",
+    "items": [
+     "Built a model that let business teams run their own webinars, piloted it, then rolled it out across five countries.",
+     "Rewrote titles and invites so every session delivered what it promised."
+    ]
+   },
+   {
+    "heading": "In-person events",
+    "items": [
+     "Revived in-person events after years without them: a three-city pilot in Perth, Canberra and Adelaide.",
+     "Ran all logistics and wrote every invitation and follow-up."
+    ]
+   },
+   {
+    "heading": "Content",
+    "items": [
+     "Web pages, SEO blogs, social and partner posts for all markets.",
+     "Employer brand stories on life beyond the tech."
+    ]
+   }
+  ],
+  "tools": "HubSpot, Asana"
  },
  "nzas-2026": {
   "title": "NZ Aerospace Summit 2026",
@@ -511,7 +524,8 @@ const focusables=el=>[...el.querySelectorAll('button,[href],[tabindex]:not([tabi
 function trap(e,el){if(e.key!=='Tab')return;const f=focusables(el);if(!f.length)return;const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}
 function open(id,card){const p=data[id];if(!p)return;cur=p;opener=card;
 panel.classList.toggle('noimg',!p.images.length&&!p.video);gal.innerHTML=(p.video?`<figure class="pm-fig pm-video"><div style="position:relative;aspect-ratio:16/9;width:100%"><iframe src="https://www.youtube-nocookie.com/embed/${esc(p.video.id)}" title="${esc(p.video.title)}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>${esc(p.video.caption)}</figcaption></figure>`:'')+p.images.map((im,i)=>`<figure class="pm-fig"><button type="button" data-i="${i}" aria-label="Enlarge image ${i+1} of ${p.images.length}"><img src="${esc(im.thumb||im.src)}" alt="${esc(im.alt)}" loading="lazy"></button>${im.caption?`<figcaption>${esc(im.caption)}</figcaption>`:''}</figure>`).join('');
-txt.innerHTML=`<p class="eyebrow">${esc(p.org)}</p><h2 id="pm-title">${esc(p.title)}</h2><dl><dt>The brief</dt><dd>${esc(p.brief)}</dd><dt>What I did</dt><dd><ul>${p.did.map(d=>`<li>${esc(d)}</li>`).join('')}</ul></dd><dt>What happened</dt><dd>${esc(p.outcome)}</dd>${p.links?`<dt>${esc(p.linksLabel||'Posts I wrote')}</dt><dd><ul>${p.links.map(l=>`<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></li>`).join('')}</ul></dd>`:''}</dl>${p.note?`<p class="pm-note">${esc(p.note)}</p>`:''}`;
+const didHtml=p.didSections?p.didSections.map(sec=>`<p class="pm-sub">${esc(sec.heading)}</p><ul>${sec.items.map(d=>`<li>${esc(d)}</li>`).join('')}</ul>`).join('')+(p.tools?`<p class="pm-tools">Tools: ${esc(p.tools)}</p>`:''):`<ul>${p.did.map(d=>`<li>${esc(d)}</li>`).join('')}</ul>`;
+txt.innerHTML=`<p class="eyebrow">${esc(p.org)}</p><h2 id="pm-title">${esc(p.title)}</h2><dl><dt>The brief</dt><dd>${esc(p.brief)}</dd><dt>What I did</dt><dd>${didHtml}</dd><dt>What happened</dt><dd>${esc(p.outcome)}</dd>${p.links?`<dt>${esc(p.linksLabel||'Posts I wrote')}</dt><dd><ul>${p.links.map(l=>`<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></li>`).join('')}</ul></dd>`:''}</dl>${p.note?`<p class="pm-note">${esc(p.note)}</p>`:''}`;
 pm.hidden=false;document.body.classList.add('modal-open');{const r=card.getBoundingClientRect(),q=panel.getBoundingClientRect();panel.style.setProperty('--ox',(r.left+r.width/2-q.left)+'px');panel.style.setProperty('--oy',(r.top+r.height/2-q.top)+'px')}panel.scrollTop=0;requestAnimationFrame(()=>requestAnimationFrame(()=>pm.classList.add('open')));pm.querySelector('.pm-close').focus()}
 function close(){pm.classList.remove('open');const done=()=>{pm.hidden=true;document.body.classList.remove('modal-open');opener&&opener.focus()};rm.matches?done():setTimeout(done,350)}
 function show(i){idx=(i+cur.images.length)%cur.images.length;const im=cur.images[idx];lbImg.src=im.src;lbImg.alt=im.alt;lbCap.textContent=im.caption||'';lbCount.textContent=`${idx+1} / ${cur.images.length}`}
