@@ -619,7 +619,7 @@ if(location.hash.startsWith('#project-')){const c=document.querySelector(`[data-
 })();
 
 (function(){
-  const ENDPOINT='https://formsubmit.co/ajax/mekdimtesfaye07@gmail.com';
+  const ENDPOINT='https://formsubmit.co/ajax/9abb9cd76aea325fcc3a51e669157473';
   const OK="Thanks, I'll send my CV through shortly.";
   const ERR="Sorry, that didn't send. Please email me directly and I'll send the CV through.";
   const EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -673,7 +673,8 @@ if(location.hash.startsWith('#project-')){const c=document.querySelector(`[data-
           body:JSON.stringify(body)
         });
         const data=await res.json().catch(()=>({}));
-        const ok=res.ok&&(data.success===true||data.success==='true'||String(data.message||'').toLowerCase().includes('submitted'));
+        const text=String(data.message||'').toLowerCase();
+        const ok=res.ok&&(data.success===true||data.success==='true'||text.includes('submitted')||text.includes('activat'));
         if(!ok) throw new Error('submit failed');
         setMsg(msg,OK,true);
         send.hidden=true;
