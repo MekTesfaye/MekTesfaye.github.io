@@ -25,7 +25,7 @@ section{padding:5rem 0;border-bottom:1px solid var(--line)}
 .eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;color:var(--muted);margin:0 0 .75rem}
 .lead{font-size:1.2rem;color:var(--muted);max-width:40rem}
 .hero{padding:7rem 0 6rem}
-.btns{display:flex;flex-wrap:wrap;align-items:flex-start;gap:.75rem;margin-top:2rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
 .btn{display:inline-block;padding:.75rem 1.3rem;border-radius:999px;border:1.5px solid var(--ink);text-decoration:none;color:var(--ink);font-weight:500}
 .btn.primary{background:var(--ink);color:#fff}.btn:hover,.btn:focus-visible{background:var(--accent);border-color:var(--accent);color:#fff}
 .ph{background:repeating-linear-gradient(45deg,var(--ph),var(--ph) 12px,#e2e2dd 12px,#e2e2dd 24px);display:flex;align-items:center;justify-content:center;color:#55575d;font-size:.85rem;font-weight:500;border-radius:10px;aspect-ratio:4/3}
@@ -130,32 +130,17 @@ body.modal-open{overflow:hidden}
 .card .more{display:block}
 .card.project{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}.card.project .tag{align-self:flex-start}
 
-button.btn{font:inherit;background:transparent;cursor:pointer}
-.cv-request{display:flex;flex-direction:column;align-items:flex-start;gap:.6rem}.hero .cv-request{width:100%;margin-top:2rem}.hero .cv-request .btns{margin-top:0}.hero .cv-form{margin-top:.15rem}
-.cv-form{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;width:100%;max-width:28rem}
-.cv-form[hidden]{display:none}
-.cv-form input[type=email]{flex:1 1 12rem;min-width:0;padding:.7rem 1rem;border-radius:999px;border:1.5px solid var(--ink);font:inherit;font-size:16px;background:#fff;color:var(--ink)}
-.cv-form input[type=email]::placeholder{color:var(--muted)}
-.hero .cv-form input[type=email]{border-color:rgba(255,255,255,.85);background:rgba(8,10,15,.55);color:#fff}
-.hero .cv-form input[type=email]::placeholder{color:rgba(255,255,255,.7)}
-.cv-honey{position:absolute;left:-9999px;height:1px;width:1px;overflow:hidden}
-.cv-msg{margin:0;font-size:.95rem;flex:1 1 100%;color:var(--muted)}
-.cv-msg.is-ok{color:var(--ink)}
-.cv-msg.is-err{color:#8a2b2b}
-.hero .cv-msg{color:#e4e6ea}
-.hero .cv-msg.is-err{color:#ffd5d5}
-.cv-text{background:none;border:0;padding:0;font:inherit;color:var(--accent);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
-.cv-text:hover,.cv-text:focus-visible{color:var(--ink)}
-.contact .cv-request{display:inline-flex;vertical-align:top}
-.contact .cv-form{margin-top:.55rem}
-@media(max-width:720px){.cv-form{max-width:100%}}
+.writing-list{list-style:none;padding:0;margin:2rem 0 0;display:grid;gap:1.25rem}
+.writing-list a{font-weight:500;text-decoration:none}
+.writing-list a:hover,.writing-list a:focus-visible{text-decoration:underline;text-underline-offset:2px}
+.writing-list p{margin:.2rem 0 0;font-size:.95rem;color:var(--muted)}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav"><div class="wrap">
 <a class="brand" href="#top">Mekdim Tesfaye</a>
-<nav aria-label="Main"><ul><li><a href="#about">About</a></li><li><a href="#work">Work</a></li><li><a href="#recognition">Recognition</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<nav aria-label="Main"><ul><li><a href="#about">About</a></li><li><a href="#work">Work</a></li><li><a href="#writing">Writing</a></li><li><a href="#recognition">Recognition</a></li><li><a href="#contact">Contact</a></li></ul></nav>
 </div></header>
 <div class="layout"><main id="main">
 <section class="hero" id="top">
@@ -164,24 +149,12 @@ button.btn{font:inherit;background:transparent;cursor:pointer}
 <h1>Mekdim Tesfaye</h1>
 <p class="lead">Marketing and communications for technical industries.</p>
 <p class="support">Campaigns, events, PR and content for aerospace, geospatial software and deep tech. I explain complex products clearly, and I get people in the room.</p>
-<div class="cv-request">
 <div class="btns">
 <a class="btn primary" href="#work">View work</a>
-<button type="button" class="btn cv-toggle" aria-expanded="false" aria-controls="cv-form-hero">Request CV</button>
+<a class="btn" href="mailto:mekdimtesfaye07@gmail.com?subject=CV%20request&amp;body=Hi%20Mek%2C%20please%20send%20your%20CV.%20The%20role%20is%3A">Request my CV</a>
 <a class="btn" href="#contact">Get in touch</a>
 </div>
-<form id="cv-form-hero" class="cv-form" hidden novalidate>
-<label class="skip" for="cv-email-hero">Your email</label>
-<input type="email" id="cv-email-hero" name="email" autocomplete="email" inputmode="email" placeholder="Your email" required>
-<input type="text" name="_honey" class="cv-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-<input type="hidden" name="_subject" value="CV request from your portfolio">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="false">
-<button type="submit" class="btn">Send</button>
-<p class="cv-msg" role="status" hidden></p>
-</form>
-</div>
-<ul class="proof"><li>4x webinar attendance at Esri Australia</li><li>Marketing lead for 4 national Aerospace summits</li><li>Product launch to the edge of space, 140,000 impressions</li></ul>
+<ul class="proof"><li>4x webinar attendance at Esri Australia</li><li>Record ticket revenue, NZ Aerospace Summit 2026</li><li>140,000 impressions from a chip packet at the edge of space</li></ul>
 </div>
 <p class="hero-caption">NZ Aerospace Summit. Campaign, branding and promotion.</p>
 </section>
@@ -191,9 +164,9 @@ button.btn{font:inherit;background:transparent;cursor:pointer}
 <div>
 <p class="eyebrow">About</p>
 <h2>Hi, I'm Mekdim (most people call me Mek).</h2>
-<p>I've spent five years in marketing and communications for Esri Australia, Aerospace New Zealand and ChristchurchNZ: campaigns, virtual and in-person events, PR, content and design.</p>
-<p>Before marketing, I trained as an aircraft engineer at Air New Zealand. I still use CAD, product design and rapid prototyping via additive manufacturing, and I co-founded a startup that flew a camera above 100,000 ft. I can sit with engineers, understand what they've built, and turn it into something customers, sponsors and journalists care about.</p>
-<p>I'm based on the Gold Coast, I'm an NZ citizen with full Australian working rights, and I'm looking for marketing and communications roles in aerospace, technology and innovation.</p>
+<p>I do marketing and communications for industries that are hard to explain. For five years that has meant aerospace and geospatial software, at Aerospace New Zealand, Esri Australia and ChristchurchNZ: campaigns, events, PR and content.</p>
+<p>I started as an aircraft engineer at Air New Zealand, and I still design and 3D-print my own parts. I also co-founded a startup that flew a camera above 100,000 ft. So when an engineer explains what they've built, I follow it. Then I work out why a customer, a sponsor or a journalist should care.</p>
+<p>I'm based on the Gold Coast, with full Australian working rights as an NZ citizen. I'm looking for marketing and communications roles in aerospace, technology and innovation.</p>
 </div>
 </div></section>
 
@@ -205,15 +178,28 @@ button.btn{font:inherit;background:transparent;cursor:pointer}
 <section id="work"><div class="wrap">
 <p class="eyebrow">Work</p>
 <h2>Selected work</h2>
-<p class="lead">Five years across a national industry body, a global software company and an economic development agency. A few highlights below.</p>
+<p class="lead">Five years of work for a national industry body, a global software company and my own startup. Each project covers the problem, what I did and what happened.</p>
 <div class="grid">
-<button type="button" class="card project" data-project="esri-webinars" aria-haspopup="dialog"><img class="cover" src="assets/esri/stage-thumb.jpg" srcset="assets/esri/stage-thumb.jpg 480w, assets/esri/stage.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="Presenter on stage at an Esri Australia in-person event, with a land cover classification slide and a full room" loading="lazy"><h3>Esri Australia events: webinars and in-person</h3><p>Content specialist at Esri Australia, focused on events: virtual, in-person and the content around them.</p><span class="tag">Esri Australia · B2B events · Email · Content</span><span class="more">View project &rarr;</span></button>
-<button type="button" class="card project" data-project="nzas-2026" aria-haspopup="dialog"><img class="cover" src="assets/summit-2026/01-hero-thumb.jpg" srcset="assets/summit-2026/01-hero-thumb.jpg 480w, assets/summit-2026/01-hero.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="Summit stage screen with event branding and the sponsor wall" loading="lazy"><h3>NZ Aerospace Summit 2026</h3><p>Campaign strategy and content for New Zealand's largest aerospace networking event (750+ attendees). Set a ticket-revenue record.</p><span class="tag">Aerospace New Zealand · Campaign · Content</span><span class="more">View project &rarr;</span></button>
-<button type="button" class="card project" data-project="nzas-2023-2025" aria-haspopup="dialog"><img class="cover" src="assets/summit-2025/00-fireside-thumb.jpg" srcset="assets/summit-2025/00-fireside-thumb.jpg 480w, assets/summit-2025/00-fireside.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="Kayla Renner of Voyager Technologies on stage at the New Zealand Aerospace Summit 2025, beside a screen reading &#x27;Invited speaker - fireside chat with Mark Rocket&#x27;, with the sponsor wall behind" loading="lazy"><h3>New Zealand Aerospace Summit 2025</h3><p>Led branding, design and national campaigns for the 2025 Summit, with my own marketing budget.</p><span class="tag">Aerospace New Zealand · Brand · Campaign</span><span class="more">View project &rarr;</span></button>
-<button type="button" class="card project" data-project="mark-rocket" aria-haspopup="dialog"><img class="cover" src="assets/markrocket-plaque-thumb.jpg" srcset="assets/markrocket-plaque-thumb.jpg 480w, assets/markrocket-plaque.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="The New Zealand fern plaque floating in zero gravity, with Earth through the capsule window." loading="lazy"><h3>First New Zealander in space</h3><p>Mark Rocket approached me for messaging and PR on his Blue Origin flight on 31 May 2025, the first New Zealander in space. It came weeks after Katy Perry's flight, so the messaging had to be genuine for New Zealand audiences.</p><span class="tag">Client: Mark Rocket · PR · Video</span><span class="more">View project &rarr;</span></button>
-<button type="button" class="card project" data-project="protest-response" aria-haspopup="dialog"><img class="cover" src="assets/protest/rnz-video.jpg" alt="Thumbnail of the RNZ video Protest at aerospace summit in Christchurch" loading="lazy"><h3>When protesters showed up</h3><p>Protesters targeted Summit sponsors and speakers over aerospace militarisation. We issued releases and invited media to talk to attendees directly. Balanced coverage on 1News, RNZ, The Press and Stuff.</p><span class="tag">Aerospace New Zealand · Crisis comms</span><span class="more">View project &rarr;</span></button>
-<button type="button" class="card project" data-project="oasis-aero" aria-haspopup="dialog"><img class="cover" src="assets/oasis/hero-edge-of-space-thumb.jpg" srcset="assets/oasis/hero-edge-of-space-thumb.jpg 480w, assets/oasis/hero-edge-of-space.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="A camera playback screen showing the Heartland Extreme Crunch packet above the clouds at the edge of space" loading="lazy"><h3>Aerospace tech for guerilla marketing</h3><p>One of New Zealand's most popular radio stations “The Hits Radio” approached me through Oasis Aero, my University venture, to see if aerospace technology could be leveraged to maximise the reach of their new potato chips launch.</p><span class="tag">Oasis Aero - Client: The Hits Radio Station</span><span class="more">View project &rarr;</span></button>
+<button type="button" class="card project" data-project="esri-webinars" aria-haspopup="dialog"><img class="cover" src="assets/esri/stage-thumb.jpg" srcset="assets/esri/stage-thumb.jpg 480w, assets/esri/stage.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="Presenter on stage at an Esri Australia in-person event, with a land cover classification slide and a full room" loading="lazy"><h3>Esri Australia: webinars and events</h3><p>I rebuilt a webinar program that averaged 20–30 attendees. It now averages about 110. I also brought back in-person events after years without them.</p><span class="tag">Esri Australia · B2B events · Email · Content</span><span class="more">View project &rarr;</span></button>
+<button type="button" class="card project" data-project="nzas-2026" aria-haspopup="dialog"><img class="cover" src="assets/summit-2026/01-hero-thumb.jpg" srcset="assets/summit-2026/01-hero-thumb.jpg 480w, assets/summit-2026/01-hero.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="Summit stage screen with event branding and the sponsor wall" loading="lazy"><h3>NZ Aerospace Summit 2026</h3><p>Campaign strategy and content for New Zealand's largest aerospace event (750+ attendees). It set a ticket-revenue record.</p><span class="tag">Aerospace New Zealand · Campaign · Content</span><span class="more">View project &rarr;</span></button>
+<button type="button" class="card project" data-project="nzas-2023-2025" aria-haspopup="dialog"><img class="cover" src="assets/summit-2025/00-fireside-thumb.jpg" srcset="assets/summit-2025/00-fireside-thumb.jpg 480w, assets/summit-2025/00-fireside.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="Kayla Renner of Voyager Technologies on stage at the NZ Aerospace Summit 2025, beside a screen reading &#x27;Invited speaker - fireside chat with Mark Rocket&#x27;, with the sponsor wall behind" loading="lazy"><h3>NZ Aerospace Summit 2025</h3><p>I designed the "Open Skies" brand and ran the national campaign, with my own budget. Attendance grew again.</p><span class="tag">Aerospace New Zealand · Brand · Campaign</span><span class="more">View project &rarr;</span></button>
+<button type="button" class="card project" data-project="mark-rocket" aria-haspopup="dialog"><img class="cover" src="assets/markrocket-plaque-thumb.jpg" srcset="assets/markrocket-plaque-thumb.jpg 480w, assets/markrocket-plaque.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="The New Zealand fern plaque floating in zero gravity, with Earth through the capsule window." loading="lazy"><h3>First New Zealander in space</h3><p>Messaging and PR for Mark Rocket's Blue Origin flight, weeks after Katy Perry's flight turned opinion against space tourism. Twelve stories, and none of them about a rich tourist.</p><span class="tag">Client: Mark Rocket · PR · Video</span><span class="more">View project &rarr;</span></button>
+<button type="button" class="card project" data-project="protest-response" aria-haspopup="dialog"><img class="cover" src="assets/protest/rnz-video.jpg" alt="Thumbnail of the RNZ video Protest at aerospace summit in Christchurch" loading="lazy"><h3>When protesters showed up</h3><p>Protesters targeted the Summit over aerospace militarisation. Rather than go quiet, we put out a statement and invited media in to meet attendees. The coverage was balanced.</p><span class="tag">Aerospace New Zealand · Crisis comms</span><span class="more">View project &rarr;</span></button>
+<button type="button" class="card project" data-project="audience" aria-haspopup="dialog"><img class="cover" src="assets/audience-linkedin-page-thumb.jpg" srcset="assets/audience-linkedin-page-thumb.jpg 480w, assets/audience-linkedin-page.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="Aerospace New Zealand LinkedIn page, with the organisation banner, logo and Overview" loading="lazy"><h3>Building an audience for NZ aerospace</h3><p>LinkedIn grew from 2,500 to 9,000+ followers in under two years. The email list grew 58%, with open rates around 55%.</p><span class="tag">Aerospace New Zealand · Social · Email</span><span class="more">View project &rarr;</span></button>
+<button type="button" class="card project" data-project="oasis-aero" aria-haspopup="dialog"><img class="cover" src="assets/oasis/hero-edge-of-space-thumb.jpg" srcset="assets/oasis/hero-edge-of-space-thumb.jpg 480w, assets/oasis/hero-edge-of-space.jpg 1600w" sizes="(max-width:800px) 100vw, 400px" alt="A camera playback screen showing the Heartland Extreme Crunch packet above the clouds at the edge of space" loading="lazy"><h3>Chips at the edge of space</h3><p>The Hits and Heartland wanted a chip launch New Zealand hadn't seen before. We sent the packet to the edge of space. 140,000 impressions.</p><span class="tag">Oasis Aero · Client: The Hits</span><span class="more">View project &rarr;</span></button>
 </div>
+</div></section>
+
+<section id="writing"><div class="wrap">
+<p class="eyebrow">Writing</p>
+<h2>Writing</h2>
+<p class="lead">A few things I've written, linked to where they ran.</p>
+<ul class="writing-list">
+<li><a href="https://www.aerospace.org.nz/news/new-zealand-aerospace-summit-gets-underway-2025" target="_blank" rel="noopener noreferrer">Summit statement on protest activity</a><p>Aerospace New Zealand, 2025. A public statement written under pressure.</p></li>
+<li><a href="https://www.linkedin.com/posts/esri-australia_esriaustralia-arcgis-emergencymanagement-activity-7399976214305898496-7Yjy" target="_blank" rel="noopener noreferrer">ICEYE partnership announcement</a><p>Esri Australia, LinkedIn.</p></li>
+<li><a href="https://www.linkedin.com/posts/esri-australia_emergencymanagement-arcgis-situationalawareness-activity-7472823089131773952-daOm" target="_blank" rel="noopener noreferrer">Dataminr partnership announcement</a><p>Esri Australia, LinkedIn.</p></li>
+<li><a href="https://www.linkedin.com/posts/esri-australia_happy-earth-day-2026-this-year-were-activity-7452506552638554112-JEX_" target="_blank" rel="noopener noreferrer">Earth Day 2026: Pixels for the Planet</a><p>Esri Australia, LinkedIn.</p></li>
+</ul>
 </div></section>
 
 <section id="recognition"><div class="wrap">
@@ -231,38 +217,24 @@ button.btn{font:inherit;background:transparent;cursor:pointer}
 <p class="eyebrow">Skills</p>
 <h2>What I do</h2>
 <div class="skills">
-<div><h3>Campaigns &amp; strategy</h3><p>Planning, budgets, execution and reporting</p></div>
-<div><h3>Events</h3><p>Webinars, conferences and in-person events, end to end</p></div>
+<div><h3>Campaigns</h3><p>Strategy, budgets, delivery and reporting</p></div>
+<div><h3>Events</h3><p>Webinars, conferences and in-person events</p></div>
 <div><h3>PR &amp; media</h3><p>Press releases, executive messaging, crisis comms</p></div>
-<div><h3>Content &amp; copy</h3><p>Web, blogs, email, social, scripts, video</p></div>
-<div><h3>Brand &amp; design</h3><p>Brand Identities, event branding, rebranding, templates</p></div>
-<div><h3>Technical</h3><p>Aircraft engineering background, CAD, rapid prototyping</p></div>
-<div><h3>Social media management</h3><p>Strategy, content, scheduling, community, reporting</p></div>
+<div><h3>Content &amp; copy</h3><p>Web, blogs, email, social and video scripts</p></div>
+<div><h3>Social media</h3><p>Strategy, content, community and reporting</p></div>
+<div><h3>Brand &amp; design</h3><p>Identities, event branding and templates</p></div>
+<div><h3>Technical</h3><p>Aircraft engineering, CAD and 3D printing</p></div>
 </div>
 </div></section>
 
 <section id="contact" class="contact"><div class="wrap">
 <p class="eyebrow">Contact</p>
 <h2>Let's talk</h2>
-<p class="lead">I'm looking for marketing and communications roles in aerospace, technology and innovation. I'm also open to the occasional freelance project.</p>
+<p class="lead">I'm looking for marketing and communications roles in aerospace, technology and innovation. I also take on the occasional freelance project.</p>
 <ul>
 <li>Email: <a href="mailto:mekdimtesfaye07@gmail.com">mekdimtesfaye07@gmail.com</a></li>
 <li>LinkedIn: <a href="https://www.linkedin.com/in/mekdim-tesfaye" target="_blank" rel="noopener noreferrer">linkedin.com/in/mekdim-tesfaye</a></li>
-<li>CV:
-<div class="cv-request">
-<button type="button" class="cv-text cv-toggle" aria-expanded="false" aria-controls="cv-form-contact">Request CV</button>
-<form id="cv-form-contact" class="cv-form" hidden novalidate>
-<label class="skip" for="cv-email-contact">Your email</label>
-<input type="email" id="cv-email-contact" name="email" autocomplete="email" inputmode="email" placeholder="Your email" required>
-<input type="text" name="_honey" class="cv-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-<input type="hidden" name="_subject" value="CV request from your portfolio">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="false">
-<button type="submit" class="btn">Send</button>
-<p class="cv-msg" role="status" hidden></p>
-</form>
-</div>
-</li>
+<li>CV: <a href="mailto:mekdimtesfaye07@gmail.com?subject=CV%20request&amp;body=Hi%20Mek%2C%20please%20send%20your%20CV.%20The%20role%20is%3A">Request my CV</a>. Tell me a little about the company requesting and I will ask you to send the correct CV once I've reviewed</li>
 </ul>
 </div></section>
 </main>
@@ -270,11 +242,12 @@ button.btn{font:inherit;background:transparent;cursor:pointer}
 <footer><div class="wrap">© 2026 Mekdim Tesfaye · Gold Coast, Queensland</div></footer>
 <div class="pm" id="pm" hidden><div class="pm-backdrop" data-close></div><div class="pm-panel" role="dialog" aria-modal="true" aria-labelledby="pm-title"><button class="pm-close" type="button" aria-label="Close project details" data-close>&times;</button><div class="pm-gallery" id="pm-gallery"></div><div class="pm-text" id="pm-text"></div></div></div>
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image viewer"><img id="lb-img" alt=""><button class="lb-prev" type="button" aria-label="Previous image">&#8249;</button><button class="lb-next" type="button" aria-label="Next image">&#8250;</button><button class="lb-close" type="button" aria-label="Close image viewer">&times;</button><span class="lb-cap" id="lb-cap"></span><span class="lb-count" id="lb-count"></span></div>
-<script type="application/json" id="projects-data">{
+<script type="application/json" id="projects-data">
+{
  "esri-webinars": {
-  "title": "Esri Australia events: webinars and in-person",
+  "title": "Esri Australia: webinars and events",
   "org": "Esri Australia",
-  "brief": "Content specialist at Esri Australia, focused on events: virtual, in-person and the content around them.",
+  "brief": "Content Specialist at Esri Australia. I run virtual events, piloted the return of in-person events, and write content for every market.",
   "did": [],
   "outcome": "",
   "images": [
@@ -288,25 +261,25 @@ button.btn{font:inherit;background:transparent;cursor:pointer}
     "src": "assets/esri/iceye.jpg",
     "thumb": "assets/esri/iceye-thumb.jpg",
     "alt": "Esri Australia and ICEYE partnership announcement graphic",
-    "caption": "Graphic for a LinkedIn post I wrote: Esri Australia and ICEYE partnership."
+    "caption": "LinkedIn post I wrote: ICEYE partnership."
    },
    {
     "src": "assets/esri/earth.jpg",
     "thumb": "assets/esri/earth-thumb.jpg",
     "alt": "Happy Earth Day 'Pixels for planet' pixel-art graphic for Esri Australia",
-    "caption": "Graphic for a LinkedIn post I wrote: Earth Day 2026, Pixels for planet."
+    "caption": "LinkedIn post I wrote: Earth Day 2026."
    },
    {
     "src": "assets/esri/dataminr.jpg",
     "thumb": "assets/esri/dataminr-thumb.jpg",
     "alt": "Esri Australia and Dataminr partnership graphic",
-    "caption": "Graphic for a LinkedIn post I wrote: Esri Australia and Dataminr partnership."
+    "caption": "LinkedIn post I wrote: Dataminr partnership."
    },
    {
     "src": "assets/esri/webinar.jpg",
     "thumb": "assets/esri/webinar-thumb.jpg",
     "alt": "Esri Australia live webinar promo for 13 October 2026 on enterprise imagery",
-    "caption": "Graphic for a LinkedIn post I wrote: Esri Australia live webinar, 13 October 2026."
+    "caption": "LinkedIn post I wrote: enterprise imagery webinar."
    }
   ],
   "links": [
@@ -351,23 +324,23 @@ button.btn{font:inherit;background:transparent;cursor:pointer}
     "heading": "Content",
     "brief": "Every market needed web, blog, social and partner content.",
     "did": [
-     "Web pages, SEO blogs, social and partner posts for all markets.",
-     "Employer brand stories on life beyond the tech.",
-     "Supported internal comms, including internal initiatives and the quarterly virtual town hall for staff (regularly 500+ attendees across APAC)."
+     "Wrote web pages, SEO blogs, social and partner posts for every market.",
+     "Wrote employer brand stories on life beyond the tech.",
+     "Supported internal comms, including the quarterly staff town hall."
     ],
-    "outcome": "On-brand content with a consistent tone of voice that supported the organisation's strategic objectives."
+    "outcome": "One voice across every market, and a town hall that regularly draws 500+ staff across APAC."
    }
   ]
  },
  "nzas-2026": {
   "title": "NZ Aerospace Summit 2026",
   "org": "Aerospace New Zealand",
-  "brief": "Campaign strategy and content for New Zealand's largest aerospace networking event (750+ attendees), 1–2 October 2026 at Te Pae Christchurch Convention Centre.",
+  "brief": "New Zealand's largest aerospace networking event: 750+ attendees, 1–2 October 2026, Te Pae Christchurch. I set the campaign strategy and wrote the content.",
   "did": [
-   "Set the campaign strategy",
-   "Created the campaign content"
+   "Set the campaign strategy, from early-bird launch to the final week.",
+   "Wrote and designed the campaign: emails, social posts, flyer and prospectus."
   ],
-  "outcome": "The 2026 Summit set a ticket-revenue record.",
+  "outcome": "Record ticket revenue. Attendance has grown every year since 2023.",
   "images": [
    {
     "src": "assets/summit-2026/01-hero.jpg",
@@ -402,33 +375,33 @@ button.btn{font:inherit;background:transparent;cursor:pointer}
   ]
  },
  "nzas-2023-2025": {
-  "title": "New Zealand Aerospace Summit 2025",
+  "title": "NZ Aerospace Summit 2025",
   "org": "Aerospace New Zealand",
-  "brief": "Led branding, design and national campaigns for the 2025 Summit, with my own marketing budget. The brand had to capture New Zealand's “Open Skies” theme, balance aero and space, and stay consistent with Aerospace New Zealand's blue.",
+  "brief": "The 2025 theme was \"Open Skies\". The brand had to carry that idea, balance aviation and space, and still look like Aerospace New Zealand. I led branding, design and the national campaign, with my own budget.",
   "did": [
-   "Designed the 2025 “Open Skies” brand identity and all event graphics",
-   "Designed the landing page, one-page print flyer, email banners, social content and media kit",
-   "Shaped key messaging and promoted the Summit to target audiences"
+   "Designed the \"Open Skies\" identity and every event graphic.",
+   "Designed the landing page, print flyer, email banners, social content and media kit.",
+   "Shaped the key messages and ran the campaign to target audiences."
   ],
-  "outcome": "",
+  "outcome": "Attendance grew again, as it has every year since 2023. The brand ran through every touchpoint, from the landing page to the lectern.",
   "note": "Event photography by others. My brand work appears on the stage screens and lectern.",
   "images": [
    {
     "src": "assets/summit-2025/00-fireside.jpg",
     "thumb": "assets/summit-2025/00-fireside-thumb.jpg",
-    "alt": "Kayla Renner of Voyager Technologies on stage at the New Zealand Aerospace Summit 2025, beside a screen reading 'Invited speaker - fireside chat with Mark Rocket', with the sponsor wall behind",
+    "alt": "Kayla Renner of Voyager Technologies on stage at the NZ Aerospace Summit 2025, beside a screen reading 'Invited speaker - fireside chat with Mark Rocket', with the sponsor wall behind",
     "caption": "2025: fireside chat stage screen and sponsor wall."
    },
    {
     "src": "assets/summit-2025/00b-landing-page.jpg",
     "thumb": "assets/summit-2025/00b-landing-page-thumb.jpg",
-    "alt": "Landing page design for the New Zealand Aerospace Summit 2025: Open Skies hero with the headline 'Leveraging New Zealand's Low Air Traffic and Rapid Regulatory Environment', event dates 7–8 October 2025 in Christchurch, sponsor logos, and Sponsor, Exhibit and Present sections",
+    "alt": "Landing page design for the NZ Aerospace Summit 2025: Open Skies hero with the headline 'Leveraging New Zealand's Low Air Traffic and Rapid Regulatory Environment', event dates 7–8 October 2025 in Christchurch, sponsor logos, and Sponsor, Exhibit and Present sections",
     "caption": "2025 landing page design."
    },
    {
     "src": "assets/summit-2025/00c-flyer.jpg",
     "thumb": "assets/summit-2025/00c-flyer-thumb.jpg",
-    "alt": "One-page print flyer for the New Zealand Aerospace Summit 2025 with Open Skies branding, location and dates (Ōtautahi Christchurch, 7–8 October 2025), supporter logos, six reasons to attend, and a QR code for early registration",
+    "alt": "One-page print flyer for the NZ Aerospace Summit 2025 with Open Skies branding, location and dates (Ōtautahi Christchurch, 7–8 October 2025), supporter logos, six reasons to attend, and a QR code for early registration",
     "caption": "2025 one-page print flyer, with a QR code for early registration."
    },
    {
@@ -452,23 +425,23 @@ button.btn{font:inherit;background:transparent;cursor:pointer}
    {
     "src": "assets/summit-2025/06-entrance.jpg",
     "thumb": "assets/summit-2025/06-entrance-thumb.jpg",
-    "alt": "Entrance screen at the New Zealand Aerospace Summit 2025, showing Open Skies branding above a reception desk",
-    "caption": "Entrance screen at the New Zealand Aerospace Summit 2025."
+    "alt": "Entrance screen at the NZ Aerospace Summit 2025, showing Open Skies branding above a reception desk",
+    "caption": "Entrance screen at the NZ Aerospace Summit 2025."
    }
   ]
  },
  "mark-rocket": {
   "title": "First New Zealander in space",
   "org": "Client: Mark Rocket",
-  "brief": "Mark Rocket approached me, as marketing specialist at Aerospace New Zealand, for messaging and PR on his Blue Origin flight on 31 May 2025, which made him the first New Zealander in space. It came weeks after Katy Perry's Blue Origin flight on 14 April 2025, which drew heavy criticism of wealthy space tourism. His reputation was at risk, so the messaging had to be genuine and land with New Zealand audiences.",
+  "brief": "Mark Rocket asked me to handle messaging and PR for his Blue Origin flight on 31 May 2025, which made him the first New Zealander in space. Weeks earlier, Katy Perry's flight had drawn heavy criticism of wealthy space tourism. Mark's reputation was at risk. The story had to be true to him and land with New Zealanders.",
   "did": [
-   "Set the messaging and PR strategy for the flight, and ran the tactical work.",
-   "Managed messaging and comms between Mark and the public before the flight, through Aerospace New Zealand's channels.",
-   "Planned the shoot for promotional content in space, using the capsule's GoPro arm.",
-   "Came up with and pitched a zero-gravity promotional piece for KP5, a New Zealand startup Mark flew with, to promote New Zealand's first person in space and the summit.",
-   "Mark came back with raw footage, which I cut into the flight video below."
+   "Set the messaging and PR strategy, then ran it.",
+   "Managed comms between Mark and the public before the flight, through Aerospace New Zealand's channels.",
+   "Planned the in-capsule shoot, using the GoPro arm.",
+   "Pitched a zero-gravity piece with Christchurch startup KiwiFibre: a silver fern plate that flew with Mark and promoted the Summit.",
+   "Cut Mark's raw footage into the flight video below."
   ],
-  "outcome": "At least 12 stories across 10 outlets, including 1News, NZ Herald, Stuff, The Press, Otago Daily Times and Space.com. Coverage framed it as a Christchurch kid's dream and a win for NZ aerospace. None took the rich-tourist angle.",
+  "outcome": "At least 12 stories across 10 outlets, including 1News, NZ Herald, Stuff, The Press, Otago Daily Times and Space.com. The coverage told the story of a Christchurch kid's dream and a win for NZ aerospace. None ran the rich-tourist angle.",
   "images": [
    {
     "src": "assets/markrocket-plaque.jpg",
@@ -498,13 +471,13 @@ button.btn{font:inherit;background:transparent;cursor:pointer}
  "protest-response": {
   "title": "When protesters showed up",
   "org": "Aerospace New Zealand",
-  "brief": "Protesters targeted Summit sponsors and speakers over aerospace militarisation. We chose to respond.",
+  "brief": "Protesters targeted Summit sponsors and speakers over aerospace militarisation. Silence would have left the story to others. We chose to respond.",
   "did": [
-   "Issued press releases",
-   "Invited media to talk to attendees directly",
-   "Drafted the Aerospace New Zealand response and Mark Rocket's talking points for media"
+   "Wrote Aerospace New Zealand's public statement.",
+   "Drafted Mark Rocket's talking points for media.",
+   "Invited journalists in to speak with attendees directly."
   ],
-  "outcome": "Balanced coverage on 1News, RNZ, The Press and Stuff.",
+  "outcome": "Balanced coverage on 1News, RNZ, The Press and Stuff, with our statement and spokesperson quoted in RNZ, The Press and The Spinoff.",
   "images": [
    {
     "src": "assets/protest/rnz-video.jpg",
@@ -541,18 +514,55 @@ button.btn{font:inherit;background:transparent;cursor:pointer}
    }
   ]
  },
- "oasis-aero": {
-  "title": "Aerospace tech for guerilla marketing",
-  "org": "The Hits Radio Station",
-  "brief": "Heartlands Potatoes and The Hits Radio Station were collaborating to launch a new flavor of potato chips. They wanted a way to create a unique launch campaign that was unlike anything ever done in New Zealand.",
+ "audience": {
+  "title": "Building an audience for NZ aerospace",
+  "org": "Aerospace New Zealand",
+  "brief": "In 2023, Aerospace New Zealand had 2,500 LinkedIn followers and an email list of 1,900.",
   "did": [
-   "Kick-off meeting with key stakeholders to understand requirements and options available to successfully deliver the project",
-   "Design mission and payload system (excluding electronics)",
-   "Set up cameras to capture the key moments.",
-   "Lead the launch and recovery mission.",
-   "Coordinate post-launch activities including footage retrieval and documentation"
+   "Ran five channels: LinkedIn, X, Facebook, Instagram and YouTube.",
+   "Set the content strategy and wrote the posts, newsletters and articles.",
+   "Later built an AI-assisted weekly workflow for news monitoring and LinkedIn content."
   ],
-  "outcome": "Successfully supported a product launch campaign that achieved almost 140,000 impressions (62,000 impressions from the chips launch video alone) and the broader campaign drove a 39.5% increase in sales over the previous year. Demonstrated that an aerospace enabled marketing campaign can achieve a high campaign when executed correctly.",
+  "outcome": "9,000+ LinkedIn followers in under two years, up 260%. 3,000 email subscribers, up 58%, with open rates around 55%.",
+  "images": [
+   {
+    "src": "assets/audience-linkedin-page.jpg",
+    "thumb": "assets/audience-linkedin-page-thumb.jpg",
+    "alt": "Aerospace New Zealand LinkedIn page, with the organisation banner, logo and Overview",
+    "caption": "The Aerospace New Zealand LinkedIn page, with the organisation banner, logo and Overview."
+   },
+   {
+    "src": "assets/audience-rocketlab-2023.jpg",
+    "thumb": "assets/audience-rocketlab-2023-thumb.jpg",
+    "alt": "Rocket Lab LinkedIn post promoting Leigh Foster as a keynote speaker at the NZ Aerospace Summit 2023",
+    "caption": "Rocket Lab LinkedIn post promoting Leigh Foster as a keynote speaker at the NZ Aerospace Summit 2023."
+   },
+   {
+    "src": "assets/audience-summit2024-earlybird.jpg",
+    "thumb": "assets/audience-summit2024-earlybird-thumb.jpg",
+    "alt": "Early-bird ticket graphic for the NZ Aerospace Summit 2024, with a panel on stage facing the audience",
+    "caption": "Early-bird ticket graphic for the NZ Aerospace Summit 2024, with a panel on stage facing the audience."
+   },
+   {
+    "src": "assets/audience-nzsa-scholarship.jpg",
+    "thumb": "assets/audience-nzsa-scholarship-thumb.jpg",
+    "alt": "New Zealand Space Agency graphic for the 2025 Space Scholarship, showing a person holding a model rocket",
+    "caption": "New Zealand Space Agency graphic for the 2025 Space Scholarship, showing a person holding a model rocket."
+   }
+  ]
+ },
+ "oasis-aero": {
+  "title": "Chips at the edge of space",
+  "org": "Oasis Aero · Client: The Hits",
+  "brief": "The Hits and Heartland were launching a new chip flavour, and wanted a campaign New Zealand hadn't seen before. They came to my startup, Oasis Aero, to ask if we could send the packet to the edge of space.",
+  "did": [
+   "Scoped the mission with both clients.",
+   "Designed the flight and the payload in Fusion 360.",
+   "Set up the cameras to capture the key shots.",
+   "Led the launch and the recovery.",
+   "Retrieved the footage and handed it over for the campaign."
+  ],
+  "outcome": "Almost 140,000 impressions, 62,000 of them from the launch video alone. The wider campaign lifted sales 39.5% on the previous year.",
   "images": [
    {
     "src": "assets/oasis/hero-edge-of-space.jpg",
@@ -591,7 +601,8 @@ button.btn{font:inherit;background:transparent;cursor:pointer}
    }
   ]
  }
-}</script>
+}
+</script>
 <script>
 (()=>{const data=JSON.parse(document.getElementById('projects-data').textContent);
 const pm=document.getElementById('pm'),panel=pm.querySelector('.pm-panel'),gal=document.getElementById('pm-gallery'),txt=document.getElementById('pm-text');
@@ -616,75 +627,6 @@ lb.addEventListener('click',e=>{if(e.target===lb)lbClose()});
 document.addEventListener('keydown',e=>{if(!lb.hidden){if(e.key==='Escape')lbClose();else if(e.key==='ArrowRight')show(idx+1);else if(e.key==='ArrowLeft')show(idx-1);else trap(e,lb);return}
 if(!pm.hidden){if(e.key==='Escape')close();else trap(e,panel)}});
 if(location.hash.startsWith('#project-')){const c=document.querySelector(`[data-project="${location.hash.slice(9)}"]`);c&&setTimeout(()=>c.click(),300)}
-})();
-
-(function(){
-  const ENDPOINT='https://formsubmit.co/ajax/9abb9cd76aea325fcc3a51e669157473';
-  const OK="Thanks, I'll send my CV through shortly.";
-  const ERR="Sorry, that didn't send. Please email me directly and I'll send the CV through.";
-  const EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  function setMsg(el,text,ok){
-    el.hidden=false;
-    el.textContent=text;
-    el.classList.toggle('is-ok',!!ok);
-    el.classList.toggle('is-err',!ok);
-  }
-  document.querySelectorAll('.cv-request').forEach(box=>{
-    const toggle=box.querySelector('.cv-toggle');
-    const form=box.querySelector('.cv-form');
-    const email=form.querySelector('input[type=email]');
-    const honey=form.querySelector('[name=_honey]');
-    const msg=form.querySelector('.cv-msg');
-    const send=form.querySelector('[type=submit]');
-    toggle.addEventListener('click',()=>{
-      const open=form.hidden;
-      form.hidden=!open;
-      toggle.setAttribute('aria-expanded',open?'true':'false');
-      if(open) setTimeout(()=>email.focus(),0);
-    });
-    form.addEventListener('submit',async e=>{
-      e.preventDefault();
-      const value=(email.value||'').trim();
-      email.value=value;
-      if(!EMAIL.test(value)){
-        email.setCustomValidity('Please enter a valid email address');
-        email.reportValidity();
-        setMsg(msg,'Please enter a valid email address.',false);
-        return;
-      }
-      email.setCustomValidity('');
-      if(honey&&honey.value){
-        setMsg(msg,OK,true);
-        send.hidden=true;
-        email.hidden=true;
-        return;
-      }
-      send.disabled=true;
-      try{
-        const body={
-          email:value,
-          _subject:form.querySelector('[name=_subject]').value,
-          _template:form.querySelector('[name=_template]').value,
-          _captcha:form.querySelector('[name=_captcha]').value
-        };
-        const res=await fetch(ENDPOINT,{
-          method:'POST',
-          headers:{'Content-Type':'application/json','Accept':'application/json'},
-          body:JSON.stringify(body)
-        });
-        const data=await res.json().catch(()=>({}));
-        const text=String(data.message||'').toLowerCase();
-        const ok=res.ok&&(data.success===true||data.success==='true'||text.includes('submitted')||text.includes('activat'));
-        if(!ok) throw new Error('submit failed');
-        setMsg(msg,OK,true);
-        send.hidden=true;
-        email.hidden=true;
-      }catch(err){
-        setMsg(msg,ERR,false);
-        send.disabled=false;
-      }
-    });
-  });
 })();
 </script>
 </body>
